@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'images/css/index.css' %}" rel="stylesheet" type="text/css">
+    <style>
+        .wrapper{
+            background-image: url("{% static 'images/ba.jpg' %}");
+        }
+        .body{
+            text-align: center;
+            padding: 5%;
+        }
+        .body h2{
+            font-family: "Audiowide", sans-serif;
+            font-size: 50px; 
+            padding: 1%;
+        }
+        .body p{
+            font-family: "Audiowide", sans-serif;
+            font-size: 30px; 
+            color: rgb(32, 185, 5);
+            padding: 1%;
+        }
+        .body a{
+            font-family: "Audiowide", sans-serif;
+            text-decoration: none;
+            padding: 1%;
+            display: block;
+            height: 5%;
+            margin: auto;
+            width: 10%;
+            color: white;
+            background: #080755;
+            border-radius: 5px;
+            font-weight: bold;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body class="wrapper">
+    <h1>GRAPHICAL PASSWORD AUTHENTICATION</h1>
+    <div class="body">
+        <h2>WELCOME!</h2>
+        <p>You have successfully signed in</p>
+        <a href=logout>Logout</a>
+    </div>
+</body>
+</html>

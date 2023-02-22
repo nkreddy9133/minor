@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'images/css/index.css' %}" rel="stylesheet" type="text/css">
+    <style>
+        .wrapper{
+            background-image: url("{% static 'images/ba.jpg' %}");
+        }
+    </style>
+
+</head>
+<body class="wrapper">
+    
+    <h1>GRAPHICAL PASSWORD AUTHENTICATION</h1>
+    <div>
+        <div class="box">
+            <ul class="tabs">
+                <li class="active">
+                    <a href=login>Login</a>
+                </li>
+                <li>
+                    <a href=register>Register</a>
+                </li>
+            </ul>
+            <ul>
+            <form action="login" method="POST" id="login1">
+            {% csrf_token %}
+                <div class="cred" >
+                    {% csrf_token %}
+                    {% if messages %}
+                        {% for message in messages %}
+                        <p class="errormess">{{ message }}</p>
+                        {% endfor %}
+                        <br>
+                    {% endif %}
+                    <p>Username:</p>
+                    <input type="text" name="username" placeholder="Enter username">
+                    <p>Password:</p>
+                    <div class="grid">
+                        {% for i in pics %}
+                            <img src="{{i.img.url}}" class="images" id="{{i.id}}" onclick="borderImage(this);clicks(this.id)">
+                        {% endfor %}
+
+                    </div>
+                
+                <input type="hidden" name="pass" id="arr">
+                <input type="submit" value="Login">
+                </div>
+            </form>   
+        </div>
+    </div>
+    <script>
+        var a = [];
+        function clicks(x)
+        {
+            if (a.includes(x))
+            {
+                a=arrayRemove(a,x)
+                console.log(a);
+            }
+            else
+            {
+                a.push(x);
+                console.log(a);
+            }
+        }
+        function borderImage(img)
+        {
+            if (a.includes(img.id))
+            {
+                img.style.border="none";
+            }
+            else
+            {
+                img.style.border = "solid 2px rgb(15, 7, 78)";
+                img.style.borderRadius = "8px";
+            
+            }
+        }
+        const formlog=document.getElementById("login1");
+        formlog.addEventListener('submit',addvalue);
+        function addvalue(){
+            const arry=document.querySelector("#arr");
+            arry.value=a;
+        }
+        function arrayRemove(a,x)
+        {
+            var index=a.indexOf(x);
+            if(index>=-1)
+            {
+                a.splice(index,1);
+            }
+            return a;
+        }
+    </script>
+
+</body>
+</html>

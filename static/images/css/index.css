@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+
+h1{
+    text-align: center;
+    text-shadow: 2px 2px white;
+    padding: 4%;
+    font-size: 40px;
+    border-bottom: 1px;
+    box-shadow: 5px 10px 8px #888888;
+    background: linear-gradient(0deg, #2884B8,#D1BAD2);
+    color:rgb(15, 7, 78); 
+    font-family: "Audiowide", sans-serif; 
+    line-height: 48px; 
+    margin: 0 0 18px; 
+}
+
+.box{
+    display: block;
+    position:relative;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    right: 0;
+    left: 0;
+    padding-top: 0%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    z-index: 1000;
+    transition: box-shadow 1s;
+    box-shadow: 5px 5px 5px 5px #888888;
+    border-radius: 8px;
+}
+
+.tabs{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0px;
+    border-radius: 8px 8px 0px 0px;
+    background-color:#99a8ca ;
+}
+.tabs > li{
+    transition-duration: 0.25s;
+    display: table-cell;
+    list-style: none;
+    margin-top: 0%;
+    text-align: center;
+    padding: 20px 20px 25px 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color: #666;
+    background-color: none;
+} 
+.tabs > li:hover{
+    font-size: 20px;
+    transition-duration: 0.25s;
+}
+.tabs > li > a{
+    text-decoration: none;
+    color:rgb(15, 7, 78); 
+    font-family: "Audiowide", sans-serif;
+    font-weight: bold;
+}
+
+.tabs > li.active {
+    background: #2884B8;
+    margin-top: 0px;
+    border-radius: 8px 8px 0px 0px;
+}
+  
+form input {
+    border: none;
+    padding: 12px;
+    background: #EEE;
+    font-size: 16px;
+    margin: 12px 0px;
+    width: 300px;
+    font-weight: 100;
+    outline: none;
+}
+  
+form input:first-child {margin-top: 8px;}
+form input:last-child {margin-top: 16px; margin-bottom: 0px;}
+ 
+form input:focus {background-color:#FFF;}
+form [type="text"]{
+    border-radius: 7px;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 70%;
+} 
+form [type="email"]{
+    border-radius: 7px;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 70%;
+} 
+input:hover {background-color: #FFF;}
+form input:placeholder {color: blue;}
+form input::placeholder { 
+    color:#666;
+    opacity: 0.8; 
+    font-family: "Audiowide", sans-serif;
+  }
+
+form [type="submit"]:focus,
+form [type="submit"]:hover {background: #2884B8;}
+
+form [type="submit"] {
+    background:rgb(15, 7, 78); ;
+    color:white; 
+    padding: 24px;
+    width: 100%;
+    font-family: "Audiowide", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.cred{
+    padding: 5%;
+    background: linear-gradient(0deg, #D1BAD2, #2884B8);
+    border-radius: 0px 0px 8px 8px;
+}
+.cred p{
+    font-family: "Audiowide", sans-serif;
+    font-size: 15px;
+    margin-bottom: 3%;
+}
+.errormess{
+    font-family: "Audiowide", sans-serif;
+    color: red;
+}
+::-webkit-input-placeholder {color: #DDD;}
+	:-moz-placeholder           {color: #DDD;}
+	::-moz-placeholder          {color: #DDD;}
+	:-ms-input-placeholder      {color: #DDD;}
+
+.grid{
+    text-align: center;
+    width: 75%;
+    margin:auto;
+}
+.images{
+    width: 20%;
+    padding: 0.3%;
+    margin: 0px;
+}
+
+
